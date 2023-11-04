@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ebdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hangman-game {
+    background-color: #fff;
+    width: 500px;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#pantalla {
+    margin: 20px 0;
+}
+
+/*cajas de la palabra*/
+.caja-palabra {
+    background-color: aqua;
+    padding: 5px;
+}
+
+.caja-palabra .textBox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: 1px solid #000;
+}
+
+
+/*cajas de letras de abecedario*/
+.cajas-letras {
+    margin: 10px 0;
+    background-color: aquamarine;
+}
+
+.cajas-letras .textBox {
+    display: inline-block;
+    width: 30px;
+    margin: 5px;
+    border: 1px solid #141414;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cajas-letras .true {
+    background-color: green;
+    color: #fff;
+}
+
+.cajas-letras .false {
+    background-color: red;
+    color: #fff;
+}
+
+/*pantalla de sin seleccionar*/
+.hangman-game .panel {
+    width: 500px;
+    height: 85%;
+    background-color: rgba(184, 172, 172, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+}
+
+/*texto de intentos*/
+.hangman-game #textIntento {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+/*mostrar pantalla de que perdio*/
+.container .gameOver {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #cc4028;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+.container .loser {
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/*boton de reiniciar*/
+.hangman-game button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #2de6d6;
+    color: #fff;
+    border: 1px solid #18b8aa;
+    border-radius: 10px;
+}
+
+.hangman-game .boton {
+    animation: parpadear 3s infinite;
+}
+
+@keyframes parpadear{
+    0% {
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+}

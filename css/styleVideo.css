@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content .content-video {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+}
+
+.content .content-video blockquote {
+    height: 600px;
+}

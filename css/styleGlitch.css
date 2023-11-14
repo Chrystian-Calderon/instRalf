@@ -1,0 +1,75 @@
+.container {
+    width: 100vw;
+    overflow: hidden;
+    background: url('../img/background.jpg') center/cover no-repeat;
+    filter: grayscale(50%) brightness(80%);
+}
+
+.pixelated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.02);
+    mix-blend-mode: screen;
+}
+
+.pixelated-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/ruido.png');
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: vhs-animacion 0.2s infinite linear alternate-reverse;
+}
+
+.container #lines {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 30px;
+    animation: line 15s infinite linear;
+}
+.container #group-line {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.container #group-line .group-lines {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 30px;
+}
+.container #group-line .group-lines:first-child {
+    height: 40px;
+}
+.container #group-line .group-lines:last-child {
+    height: 20px;
+}
+
+@keyframes vhs-animacion {
+    0% {
+        transform: translateX(-10px)
+    }
+    100% {
+        transform: translateX(10px)
+    }
+}
+
+@keyframes line {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}

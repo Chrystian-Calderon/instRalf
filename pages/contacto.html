@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChrysRalf</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleGlitch.css">
+    <link rel="stylesheet" href="../css/styleContact.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="pixelated-bg"></div>
+        <div id="lines"></div>
+        <div id="group-line" style="display: none;">
+            <div class="group-lines"></div>
+            <div class="group-lines"></div>
+            <div class="group-lines"></div>
+        </div>
+
+        <header>
+            <div class="title">
+                <h1>ChrysRalf</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="videos.html">Videos</a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="proyectos.html">Proyectos</a>
+                        <i></i>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                        <i class="line"></i>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <form id="contactForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="company">Empresa:</label>
+                <input type="text" id="company" name="company">
+
+                <label for="reason">Motivo de Contacto:</label>
+                <select id="reason" name="reason">
+                    <option value="consulta">Consulta</option>
+                    <option value="oferta">Oferta de trabajo</option>
+                    <option value="proyecto">Proyecto potencial</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="button" onclick="enviarFormulario()">Enviar</button>
+            </form>
+
+            <script>
+
+            </script>
+        </div>
+        <div class="footer">
+            <footer>
+                <div class="text">
+                    <span>ChrysRalf - <span id="date"></span></span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.getElementById('date').innerHTML = new Date().getFullYear();
+
+        //formulario
+        function enviarFormulario() {
+            alert("Formulario enviado. ¡Gracias por ponerte en contacto!");
+        }
+    </script>
+    <script src="../js/line.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let words = ['Programador', 'Developer', 'TikToker'],
+    let words = ['Programador', 'Developer', 'TikToker xD'],
         part,
         i = 0,
         offset = 0,
